@@ -1,0 +1,20 @@
+import deportes.*
+import atletas.*
+
+describe "Grupo de test" {
+  test "Victoria quiere ser Pareto,y su presupuesto es mayor a 500" {
+    victoria.altura(150)
+    victoria.cambiarDisciplina(judo)
+    victoria.cambiarElemento(trajeJudo)
+    victoria.cantEntrenadores(4)
+    assert.that(victoria.presupuestoTotal()>500)
+  }
+
+  test "Victoria quiere ser Del Potro,y su presupuesto es menor a 500" {
+    victoria.altura(210)
+    victoria.cambiarDisciplina(tenis)
+    victoria.cambiarElemento(raqueta)
+    victoria.cantEntrenadores(2)
+    assert.that(victoria.presupuestoTotal()>1000)
+  }
+}

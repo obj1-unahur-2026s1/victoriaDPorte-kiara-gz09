@@ -2,13 +2,21 @@ import deportes.*
 
 //ATLETAS
 object victoria {
-    var edad = 20
-    var altura = 150
-    var disciplina = judo
-    var elemento = trajeJudo
-    var presupuestoPropio = 0
-    var cantEntrenadores = 4
+    var property edad = 20
+    var property altura = 190
+    var disciplina = tenis
+    var elemento = raqueta
+    var property presupuestoPropio = 10
+    var property cantEntrenadores = 1
 
+    //Setters
+    method cambiarDisciplina(otraDisciplina) {
+      disciplina = otraDisciplina
+    }
+    method cambiarElemento(elementoNuevo) {
+      elemento = elementoNuevo
+    }
+    //Getters
     method edad() {
       return edad
     }
@@ -25,4 +33,6 @@ object victoria {
       return presupuestoPropio + disciplina.presupuestoBase() + 
       elemento.costoPara(self) + cantEntrenadores * comite.tarifaPorEntrenador()
     }
+    /*Elpolimorfismo se aplica en presupuestoPropio, ya que el costo del elemnto,  presupuestoBase por
+    disciplina son valores que varian segun el objeto victoria, pero las discplnas entienden el mismo mensaje*/ 
 }
