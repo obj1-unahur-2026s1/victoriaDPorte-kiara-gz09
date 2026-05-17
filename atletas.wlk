@@ -17,12 +17,6 @@ object victoria {
       elemento = elementoNuevo
     }
     //Getters
-    method edad() {
-      return edad
-    }
-    method altura() {
-      return altura
-    }
     method disciplina() {
       return disciplina
     }
@@ -33,6 +27,6 @@ object victoria {
       return presupuestoPropio + disciplina.presupuestoBase() + 
       elemento.costoPara(self) + cantEntrenadores * comite.tarifaPorEntrenador()
     }
-    /*Elpolimorfismo se aplica en presupuestoPropio, ya que el costo del elemnto,  presupuestoBase por
+    /*El polimorfismo se aplica en presupuestoPropio, ya que el costo del elemnto,  presupuestoBase por
     disciplina son valores que varian segun el objeto victoria, pero las discplnas entienden el mismo mensaje*/ 
 }

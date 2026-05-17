@@ -28,9 +28,10 @@ object hockey {
 object raqueta {
   var property costoPorAño = 100
   method costoPara(atleta) {
-    return costoPorAño * atleta.edad()
+    return (costoPorAño * atleta.edad()).min(3000)
   } 
 }
+
 
 object trajeJudo {
   var property costoPorCM = 50

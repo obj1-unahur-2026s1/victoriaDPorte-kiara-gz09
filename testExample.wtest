@@ -10,7 +10,7 @@ describe "Grupo de test" {
     assert.that(victoria.presupuestoTotal()>500)
   }
 
-  test "Victoria quiere ser Del Potro,y su presupuesto es menor a 500" {
+  test "Victoria quiere ser Del Potro,y su presupuesto es mayor a 1000" {
     victoria.altura(210)
     victoria.cambiarDisciplina(tenis)
     victoria.cambiarElemento(raqueta)
@@ -18,12 +18,20 @@ describe "Grupo de test" {
     assert.that(victoria.presupuestoTotal()>1000)
   }
 
-  test "Victoria quiere jugar hockey, el palo de hockey le cuesta " {
+  test "Victoria quiere jugar hockey, el palo de hockey le cuesta 40" {
     victoria.altura(210)
     victoria.cambiarDisciplina(hockey)
     victoria.cambiarElemento(paloHockey)
     victoria.cantEntrenadores(1)
     assert.equals(40, paloHockey.costoPara(victoria))
+  }
+
+  test "Victoria quiere hacer cualquier cosa, y puede" {
+    victoria.altura(210)
+    victoria.cambiarDisciplina(judo)
+    victoria.cambiarElemento(raqueta)
+    victoria.cantEntrenadores(2)
+    assert.that(victoria.presupuestoTotal()>1000)
   }
 }
 
