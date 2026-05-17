@@ -17,4 +17,17 @@ describe "Grupo de test" {
     victoria.cantEntrenadores(2)
     assert.that(victoria.presupuestoTotal()>1000)
   }
+
+  test "Victoria quiere jugar hockey, el palo de hockey le cuesta " {
+    victoria.altura(210)
+    victoria.cambiarDisciplina(hockey)
+    victoria.cambiarElemento(paloHockey)
+    victoria.cantEntrenadores(1)
+    assert.equals(40, paloHockey.costoPara(victoria))
+  }
 }
+
+  
+
+
+

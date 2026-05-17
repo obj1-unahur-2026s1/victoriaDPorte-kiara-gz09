@@ -2,7 +2,7 @@
 object tenis {
   var property hinchas = 5
   method presupuestoBase() {
-    return 200 + (3* hinchas)
+    return 200 + (3 * hinchas)
   }
 }
 
@@ -13,6 +13,14 @@ object judo {
   }
   method ganarMedalla() {
     cantMedallas += 1
+  }
+}
+
+object hockey {
+    //Presupuesto 120 + cantMicros para mover al equipo
+    const cantMicros = 4
+    method presupuestoBase() {
+        return 120 * (cantMicros * 25)
   }
 }
 
@@ -28,6 +36,13 @@ object trajeJudo {
   var property costoPorCM = 50
   method costoPara(atleta) {
     return costoPorCM * atleta.altura()
+  } 
+}
+
+object paloHockey {
+  var property costoAño = 2
+  method costoPara(atleta) {
+    return costoAño * atleta.edad()
   } 
 }
 
