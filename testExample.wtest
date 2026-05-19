@@ -10,7 +10,7 @@ describe "Grupo de test" {
     assert.that(victoria.presupuestoTotal()>500)
   }
 
-  test "Victoria quiere ser Del Potro,y su presupuesto es mayor a 1000" {
+  test " Victoria quiere ser Del Potro,y su presupuesto es mayor a 1000" {
     victoria.altura(210)
     victoria.cambiarDisciplina(tenis)
     victoria.cambiarElemento(raqueta)
